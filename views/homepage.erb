@@ -1,3 +1,11 @@
-hello
+<h1>Currency pairs</h1>
 
-<%= @raw_response%>
+<%#= @parsed_data.keys%>
+<ul>
+  <% @currencies.keys.each do |symbol| %>
+    <li>
+      <a href="/<%= symbol %>">Convert 1 <%= symbol %> to ...</a>
+    </li>
+
+  <% end %>
+</ul>
